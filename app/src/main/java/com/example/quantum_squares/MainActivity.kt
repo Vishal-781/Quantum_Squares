@@ -127,30 +127,20 @@ class MainActivity : AppCompatActivity() {
             val ballView = ImageView(this)
             ballView.setImageDrawable(ContextCompat.getDrawable(this, ballDrawable))
 
-            // Set initial size for animation
-            ballView.layoutParams = FrameLayout.LayoutParams(50, 50).apply {
-                gravity = Gravity.CENTER // Center the ball in the FrameLayout
+            // Set initial position and size for the ball
+            ballView.layoutParams = FrameLayout.LayoutParams(100, 100).apply {
+                setMargins(0, -1500, 0, 0) // Start off-screen
             }
-
-            // Initially set the ball size to 0 for scaling effect
-            ballView.scaleX = 0f
-            ballView.scaleY = 0f
 
             // Add the ball view to the FrameLayout
             frameLayout.addView(ballView)
-
-            // Animate the ball scaling up
-            val animator = ObjectAnimator.ofPropertyValuesHolder(
-                ballView,
-                PropertyValuesHolder.ofFloat("scaleX", 0f, 1f),
-                PropertyValuesHolder.ofFloat("scaleY", 0f, 1f)
-            )
-            animator.duration = 300 // Duration of the animation
-            animator.start()
-
-            // Optional: Offset each ball slightly
-            ballView.translationX = i * 15f
-            ballView.translationY = i * 15f
+//
+//            // Animate the ball coming down into the cell
+//            ballView.animate()
+//                .translationY(1500f) // Move down by 1500 pixels
+//                .rotation(360f) // Rotate 360 degrees
+//                .setDuration(1000) // Animation duration of 1000ms
+//                .start() // Start the animation
         }
     }
 

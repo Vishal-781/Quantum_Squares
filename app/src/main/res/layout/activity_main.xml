@@ -59,33 +59,36 @@
             android:layout_weight="1"/>
 
     </LinearLayout>
-<!--    <EditText-->
-<!--        android:id="@+id/grid_size_input"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="16dp"-->
-<!--        android:layout_marginTop="104dp"-->
-<!--        android:hint="Enter grid size"-->
-<!--        android:inputType="number"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/reset_button"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.498"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/game_grid" />-->
+    <EditText
+        android:id="@+id/grid_size_inpu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="104dp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:hint="Enter grid size"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/reset_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_grid" />
 
-<!--    <Button-->
-<!--        android:id="@+id/create_grid_button"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="16dp"-->
-<!--        android:layout_marginTop="148dp"-->
-<!--        android:text="Create Grid"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/reset_button"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.498"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/grid_size_input"-->
-<!--        app:layout_constraintVertical_bias="1.0" />-->
+    <Button
+        android:id="@+id/create_grid_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="148dp"
+        android:backgroundTint="@color/teal"
+        android:text="Create Grid"
+        app:layout_constraintBottom_toTopOf="@+id/reset_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/grid_size_inpu"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView"
@@ -108,7 +111,6 @@
         android:layout_margin="16dp"
         android:background="@drawable/img_1"
         app:columnCount="5"
-
         layout_gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
